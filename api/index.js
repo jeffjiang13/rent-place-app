@@ -18,14 +18,14 @@ const app = express();
 
 const bcryptSalt = bcrypt.genSaltSync(10);
 const jwtSecret = 'fasefraw4r5r3wq45wdfgw34twdfg';
-const bucket = '	rent-a-place-now';
+const bucket = 'rent-a-place-now';
 
 app.use(express.json());
 app.use(cookieParser());
 app.use('/uploads', express.static(__dirname+'/uploads'));
 app.use(cors({
   credentials: true,
-  origin: 'http://127.0.0.1:5173',
+  origin: 'http://localhost:5173',
 }));
 
 async function uploadToS3(path, originalFilename, mimetype) {
