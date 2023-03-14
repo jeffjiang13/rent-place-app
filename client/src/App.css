@@ -4,4 +4,6 @@
     bottom: 0;
     color: gray;
     font-size: 14px;
+    position: fixed;
+    text-align: center;
    }
